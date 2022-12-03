@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Список товаров
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Список товаров на сайте</h1>
+
+    {% if items|length > 0 %}
+        {% for el in items %}
+        <div class="alert alert-info">
+            <h2>{{ el.title }}</h2>
+            <p>{{ el.price }} руб</p>
+            <p><b>{{ el.date.date() }}</b></p>
+            <a href="/list-things/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>На сайт не добавлено товаров</p>
+    {% endif %}
+
+</div>
+{% endblock %}
