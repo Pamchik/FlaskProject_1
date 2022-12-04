@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Корзина
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Список выбранных товаров</h1>
+
+    {% if list_all|length > 0 %}
+        {% for el in list_all %}
+        <div>{{ el.title }}&nbsp;<b>{{ el.price }} руб</b></div>
+        {% endfor %}
+    {% else %}
+    <p>Корзина пустая</p>
+    {% endif %}
+
+</div>
+{% endblock %}
