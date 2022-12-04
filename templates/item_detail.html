@@ -9,7 +9,7 @@
     <h1>{{ item.title }}</h1>
 
     <div class="alert alert-info">
-        <p>{{ item.text }}</p>
+        <p>{{ item.description }}</p>
         <p><b>Дата: {{ item.date.date() }}</b></p>
         <a href="/list-things/{{ item.id }}/delete" class="btn btn-danger">Удалить</a>
         <a href="/list-things/{{ item.id }}/update" class="btn btn-success">Редактировать</a>

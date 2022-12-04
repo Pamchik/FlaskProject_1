@@ -8,9 +8,9 @@
     <h1>Обновление товара</h1>
     <form method="post">
 
-      <input type="text" name="title" id="title" class="form-control" placeholder="Введите название товара"><br>
-      <input type="text" name="description" id="description" class="form-control" placeholder="Введите описание товара"><br>
-      <input type="number" name="price" id="price" class="form-control" placeholder="Введите стоимость в формате 00,00"><br>
+      <input type="text" name="title" id="title" class="form-control" value="{{ item.title }}" placeholder="Введите название товара"><br>
+      <textarea name="description" id="description" class="form-control" placeholder="Введите описание товара">{{ item.description }}</textarea><br>
+      <textarea name="price" id="price" class="form-control" placeholder="Введите описание товара">{{ item.price }}</textarea><br>
       <button type="submit" class="btn btn-success">Отправить</button>
 
     </form>

@@ -16,20 +16,22 @@
   <div class="card-deck mb-3 text-center">
 
   {% for el in items %}
+  <form method="post">
     <div class="card mb-4 mb-3 shadow-sm">
         <div class="card-header">
-          <h4 class="my-0 fw-normal">{{ el.title }}</h4>
+
+          <h1 id="title" class="my-0 fw-normal">{{ el.title }}</h1>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">{{ el.price }}<small class="text-muted fw-light"> рублей</small></h1>
+          <h1 id="price" class="card-title pricing-card-title">{{ el.price }}<small class="text-muted fw-light"> рублей</small></h1>
           <ul class="list-unstyled mt-3 mb-4">
             <li>{{ el.description }}</li>
           </ul>
-          <a href="" class="w-100 btn btn-lg btn-outline-primary">Купить</a>
+            <a href="/basket-add/{{ el.id }}" class="w-100 btn btn-lg btn-outline-primary">В корзину</a>
         </div>
     </div>
 
-
+  </form>
   {% endfor %}
 
   </div>
